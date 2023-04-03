@@ -1,3 +1,6 @@
+
+//slide box
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -25,4 +28,21 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+}
+//fim do slide
+
+//dropdown-mobile
+
+
+
+var width = window.screen.width
+
+
+alert(width)
+
+if (width<801) {
+  nav.classList.add('hidden')
+}
+function dropdown() {
+  nav.classList.add("visible")
 }

@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+    /* --background-color :#FEECF8; 
+    --font-color :#805070; */
+    --background-color :#FFFFFF; 
+    --font-color :#1074BE;
+    --color-page: #F1F1F1;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,11 +18,12 @@
 body,html {
     width: 100vw;
     overflow-x: hidden;
-    background-color: #fffafa;
+    background-color: var(--background-color);
 }
 .content {
     max-width: 1300px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 iframe {
     border-radius: 1em;
@@ -27,16 +36,19 @@ iframe {
 h2 {
     font-size: 2.5em;
     font-weight: 400;
-    border-top: 1px solid #805070;
-    margin: 30px 0;
+    border-top: 1px solid var(--font-color);
+    color: var(--font-color);
+    margin: 35px 0;
 }
 h3 {
     margin-bottom: 10px;
 }
 header {
-    background-color: #CCA9C0;  
+    background-color: var(--color-page);  
     padding-bottom: 10px;
     box-shadow: 0px 4px 10px #403b3e4d;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 header .content {
     display: flex;
@@ -50,23 +62,20 @@ header .top-header {
 }
 header .top-header .registro {
     display: flex;
+    align-items: center;
 }
-header .top-header .registro button {
-    width: auto;
-    height: 40px;
-    padding: 0 15px;
-    border-radius: 0.3em;
-    background-color: #805070;
-    color: white;
-    font-weight: 600;
-    font-size: 1em;
-    box-shadow: 1px 5px 14px #403b3e59;
-    cursor: pointer;
+header .top-header .registro  p {
+    text-align: end;
     margin-right: 10px;
+    font-weight: 300;
+    cursor: pointer ;
+}
+header .top-header .registro button:hover {
+    transform: scale(1.1);
 }
 header .top-header .registro i {
     color: white;
-    background-color: #805070;
+    background-color: var(--font-color);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -76,9 +85,10 @@ header .top-header .registro i {
     font-size: 1em;
 }
 header .top-header img {
-    width: 300px;
+    width: 200px;
     height: auto;
 }
+
 header .bottom-header .nav-list {
     display: flex;
     list-style: none;
@@ -86,7 +96,6 @@ header .bottom-header .nav-list {
 header .bottom-header .nav-list li  {
     margin-right: 15px;
     padding: 0 10px;
-    
 }
 
 header .bottom-header .nav-list .nav-i-inicio{
@@ -107,13 +116,13 @@ header .bottom-header .nav-list .nav-i-sobre{
 }
 header .bottom-header .nav-list li a {
     text-decoration: none;
-    color: white;
+    color: var(--font-color);
     font-size: 1.2em;
     padding: 0 10px;
 }
 main {
     margin: 0 auto;
-    background-color: #F8EFF5;
+    background-color: white;
     width: 100%;
 }
 main .content {
@@ -132,8 +141,8 @@ main .content .ouv-section {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    background-image: url(../img/banner-mulhers.jpg);
-    background-size: cover;
+    background-image: url(../img/jovens-removebg-preview\ \(1\).png);
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -141,19 +150,17 @@ main .content .ouv-section {
 main .content .ouv-section h1 {
     color: #5c3950;
     font-size: 3em;
-    background-color: #FFD4F1;
+    background-color: var(--color-page);
     padding: 10px;
     border-radius: .4em;
-    margin: 0 auto;
+    margin-top: 220px;
     border: 2px solid white;
-    margin: 80px 0;
     box-shadow: 0px 6px 10px #403b3e60;
 
 }
 main .content .ouv-section a {
-    background-color: #FFD4F1;
+    background-color: var(--color-page);
     padding: 10px;
-    margin: 30px 0;
     border-radius: .4em;
     font-size: 1em;
     font-weight: 600;
@@ -163,9 +170,8 @@ main .content .ouv-section .ouv-opcoes {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-bottom: 100px;
-    
+    flex-wrap: wrap;   
+    margin: 30px 0;
 }
 main .content .ouv-section .ouv-opcoes div {
     width: 200px;
@@ -181,7 +187,10 @@ main .content .ouv-section .ouv-opcoes div {
     cursor: pointer;
     border: 2px solid white;
     box-shadow: 0px 6px 10px #403b3e60;
-
+    transition: .3s;
+}
+main .content .ouv-section .ouv-opcoes div:hover {
+    filter: grayscale(20%);
 }
 main .content .ouv-section .ouv-opcoes div i {
     font-size: 2em;
@@ -291,10 +300,6 @@ main .content .noticias {
   animation-duration: 1.5s;
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
 
 .scrol-noticias div p,img {
     display: inline-block;
@@ -307,17 +312,17 @@ main .content .noticias {
     overflow-y: hidden;
     max-height: 200px;
     width: 100%;
-    padding: 20px 0;
+    padding: 40px 0
+
 }
 .scrol-noticias div {
     min-width: 400px;
-    background-color: #ffd4f19f;
+    background-color: var(--color-page);
     margin-right: 30px;
     border-radius: .5em;
     padding: 10px;
     cursor: pointer;
     box-shadow: 0px 6px 10px #403b3e34;
-
 }
 .scrol-noticias div img {
     width: 70px;
@@ -342,15 +347,11 @@ main .content .sobre .sobre-content p {
     line-height: 1.8em;
 }
 footer {
-    background-color: #CCA9C0;
+    background-color: var(--color-page);
     padding: 30px 0;
-    color: white;
-}
-
-footer h2 {
-    margin: 0 0 50px 0;
     color: black;
 }
+
 footer h4 {
     font-size: 1.5em;
     margin-bottom: 20px;
@@ -362,10 +363,13 @@ footer ul li {
     margin-bottom: 10px;
 }
 footer a {
-    color: white;
+    color: black;
     text-decoration: none;
     display: flex;
     align-items: center;
+}
+footer a:hover {
+    transform: scale(1.1);
 }
 footer a i {
     font-size: 2em;
@@ -377,4 +381,19 @@ footer .content .contato-content {
     justify-content: space-between;
     max-width: 80%;
 
+}
+
+
+
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.hidden {
+    display: none!important;
+}
+.visible {
+    display: inline!important;
 }

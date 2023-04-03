@@ -1,0 +1,60 @@
+@media (max-width:800px) {
+    h2 {
+        text-align: center;
+    }
+    header .top-header {
+        height: 100px;
+        align-items: center!important;
+    }
+    header .top-header img {
+        width: 150px;
+        height: auto;
+    }
+    header .top-header .registro  p {
+        font-size: .8em;
+    }
+    header .bottom-header {
+        display: flex;
+        justify-content: end;
+    }
+    header .bottom-header .mobile-menu {
+     display: inline-block!important;
+     font-size: 1.5em;
+    }
+    
+    main .content .ouv-section {
+        background-image: none;
+    }
+    main .content .ouv-section h1 {
+     margin: 10px 0;
+     text-align: center;
+     font-size: 1.5em;
+    }
+    main .content .ouv-section .ouv-opcoes div {
+        width: 150px;
+        height: 150px;
+        margin: 0 10px 10px 0;
+        font-size: 1em;
+    }
+    .scrol-noticias div {
+        min-width: 92%;
+        height: auto;
+    }
+
+    footer .content .contato-content {
+     max-width: 100%;    
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    }
+    footer .content .contato-content div {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: center;
+    }
+    footer .content .contato-content div {
+        margin-bottom: 30px;
+    }
+}    
+
