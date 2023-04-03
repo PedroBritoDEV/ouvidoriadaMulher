@@ -88,10 +88,16 @@ header .top-header img {
     width: 200px;
     height: auto;
 }
+header .bottom-header .mobile-menu {
+    display: none;
+    font-size: 1.5em;
 
+   }
 header .bottom-header .nav-list {
     display: flex;
     list-style: none;
+    transition: 2s;
+    overflow: hidden;
 }
 header .bottom-header .nav-list li  {
     margin-right: 15px;
@@ -380,10 +386,7 @@ footer .content .contato-content {
     display: flex;
     justify-content: space-between;
     max-width: 80%;
-
 }
-
-
 
 
 @keyframes fade {
@@ -392,8 +395,11 @@ footer .content .contato-content {
 }
 
 .hidden {
-    display: none!important;
+ 
+    height: 0;
+    visibility: hidden;
 }
 .visible {
-    display: inline!important;
+    height: auto;
+    visibility: unset;
 }

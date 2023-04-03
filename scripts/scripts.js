@@ -23,26 +23,25 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+
 }
 //fim do slide
 
+
+
 //dropdown-mobile
 
-
-
+var nav = document.querySelector(".nav-list")
+var btn_mobile = document.querySelector(".mobile-menu")
 var width = window.screen.width
 
 
-alert(width)
 
 if (width<801) {
   nav.classList.add('hidden')
+  btn_mobile.classList.remove('hidden')
 }
 function dropdown() {
-  nav.classList.add("visible")
+  nav.classList.toggle("hidden")
 }

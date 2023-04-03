@@ -1,4 +1,12 @@
 @media (max-width:800px) {
+    :root {
+        /* --background-color :#FEECF8; 
+        --font-color :#805070; */
+        --background-color :#FFFFFF; 
+        --font-color :#1074BE;
+        --color-page: #F1F1F1;
+    }
+
     h2 {
         text-align: center;
     }
@@ -18,10 +26,20 @@
         justify-content: end;
     }
     header .bottom-header .mobile-menu {
-     display: inline-block!important;
+     display: inline-block;
      font-size: 1.5em;
     }
-    
+    header .bottom-header .nav-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--color-page);
+        border: 1px solid black;
+        right: 30px;
+        top: 130px;
+        padding: 10px;
+    }
     main .content .ouv-section {
         background-image: none;
     }
