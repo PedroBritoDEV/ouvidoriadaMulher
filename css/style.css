@@ -18,6 +18,7 @@
 body,html {
     width: 100vw;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     background-color: var(--background-color);
 }
 .content {
@@ -96,27 +97,28 @@ header .bottom-header .mobile-menu {
 header .bottom-header .nav-list {
     display: flex;
     list-style: none;
-    transition: 2s;
+    transition: .5s;
     overflow: hidden;
 }
 header .bottom-header .nav-list li  {
     margin-right: 15px;
     padding: 0 10px;
+    
 }
 
 header .bottom-header .nav-list .nav-i-inicio{
     border-bottom: 3px solid #B8272F;
 
 }
-header .bottom-header .nav-list .nav-i-ouvidoria{
+header .bottom-header .nav-list .nav-i-noticias{
     border-bottom: 3px solid #116495;
 
 }
-header .bottom-header .nav-list .nav-i-noticias{
+header .bottom-header .nav-list .nav-i-sobre{
     border-bottom: 3px solid #0C8E41;
 
 }
-header .bottom-header .nav-list .nav-i-sobre{
+header .bottom-header .nav-list .nav-i-contato{
     border-bottom: 3px solid #F8BE1C;
 
 }
@@ -342,9 +344,6 @@ main .content .sobre {
     width: 100%;
     
 }
-main .content .sobre .sobre-content  {
-    
-}
 main .content .sobre .sobre-content h3 {
     font-size: 1.5em;
     font-weight: 500;
@@ -395,11 +394,10 @@ footer .content .contato-content {
 }
 
 .hidden {
- 
-    height: 0;
-    visibility: hidden;
-}
-.visible {
-    height: auto;
-    visibility: unset;
+    width: 30vw!important;
+    height: 0!important;
+    opacity: 0!important;
+    display: flex;
+    transition: .4s;
+
 }

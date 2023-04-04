@@ -26,19 +26,25 @@
         justify-content: end;
     }
     header .bottom-header .mobile-menu {
-     display: inline-block;
-     font-size: 1.5em;
+        display: inline-block;
+        font-size: 1.5em;
     }
     header .bottom-header .nav-list {
         position: absolute;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
         background-color: var(--color-page);
         border: 1px solid black;
-        right: 30px;
-        top: 130px;
+        right: 20px;
+        top: 140px;
         padding: 10px;
+        height: 200px;
+        width: 30vw;
+    }
+    header .bottom-header .nav-list li{
+        margin: 0;
     }
     main .content .ouv-section {
         background-image: none;
@@ -55,7 +61,7 @@
         font-size: 1em;
     }
     .scrol-noticias div {
-        min-width: 92%;
+        min-width: 82%;
         height: auto;
     }
 
